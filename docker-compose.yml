@@ -1,0 +1,22 @@
+version: '3'
+services:
+  web:
+    container_name: web
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./:/usr/src/app
+    build: .
+    links: 
+      - mysql
+  mysql:
+    container_name: mysql
+    image: mysql:5.7.23
+    ports:
+      - "3307:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=rootpwd
+      - MYSQL_DATABASE=forex_dev
+      - MYSQL_USER=bagus
+      - MYSQL_PASSWORD=baguspwd
+    
