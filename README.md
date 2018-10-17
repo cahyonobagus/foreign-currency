@@ -17,6 +17,8 @@ docker-compose exec web sequelize db:migrate
 
 > base_url : http://localhost:3000/api/v1
 
+> base_url (live) : http://35.240.141.217:3000/api/v1
+
 | Method | Endpoint | Purpose | Params | Params Data Type |
 |--------|----------|---------|--------|------------------|
 | POST   | {base_url}/forex/daily  | input daily exhange rate data | date | string (YYYY-MM-DD)|
